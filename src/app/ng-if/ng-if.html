@@ -1,0 +1,22 @@
+<h2>*ngIf Example</h2>
+
+<button (click)="toggle()">Toggle Login</button>
+<p>Current Status: <strong>{{ isLoggedIn }}</strong></p>
+
+<hr />
+
+<h3>1. *ngIf</h3>
+<div *ngIf="isLoggedIn">
+  Welcome to the dashboard.
+</div>
+
+<hr />
+
+<h3>2. *ngIf with else</h3>
+<div *ngIf="isLoggedIn; else loginBox">
+  Dashboard content
+</div>
+
+<ng-template #loginBox>
+  Please log in.
+</ng-template>

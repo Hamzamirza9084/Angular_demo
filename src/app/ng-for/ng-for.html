@@ -1,0 +1,24 @@
+<h2>*ngFor Example</h2>
+
+<h3>1. Fruits</h3>
+<ul>
+  <li *ngFor="let fruit of fruits; let i = index">
+    {{ i + 1 }} - {{ fruit }}
+  </li>
+</ul>
+
+<hr />
+
+<h3>2. Students</h3>
+<table border="1" cellpadding="8">
+  <tr>
+    <th>Sr No</th>
+    <th>Name</th>
+    <th>City</th>
+  </tr>
+  <tr *ngFor="let s of students; let i = index">
+    <td>{{ i + 1 }}</td>
+    <td>{{ s.name }}</td>
+    <td>{{ s.city }}</td>
+  </tr>
+</table>

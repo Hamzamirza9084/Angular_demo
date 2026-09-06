@@ -1,0 +1,14 @@
+<h2>[ngSwitch] Example</h2>
+
+<p>Click a button to change color:</p>
+<button (click)="changeColor('red')">Red</button>
+<button (click)="changeColor('green')">Green</button>
+<button (click)="changeColor('blue')">Blue</button>
+<button (click)="changeColor('orange')">Other</button>
+
+<div [ngSwitch]="color" style="margin-top: 15px;">
+  <h3 *ngSwitchCase="'red'" style="color: red;">Selected Color: RED</h3>
+  <h3 *ngSwitchCase="'green'" style="color: green;">Selected Color: GREEN</h3>
+  <h3 *ngSwitchCase="'blue'" style="color: blue;">Selected Color: BLUE</h3>
+  <h3 *ngSwitchDefault>No matching color selected (Default).</h3>
+</div>
