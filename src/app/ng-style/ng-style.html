@@ -1,0 +1,13 @@
+<h2>[ngStyle] Example</h2>
+
+<p>Click buttons to change styles:</p>
+<button (click)="changeColor('red')">Red</button>
+<button (click)="changeColor('green')">Green</button>
+<button (click)="changeColor('blue')">Blue</button>
+<button (click)="increaseSize()">Increase Size (+)</button>
+<button (click)="decreaseSize()">Decrease Size (-)</button>
+
+<div [ngStyle]="{ 'color': color, 'font-size.px': fontSize, 'margin-top': '20px' }">
+  <h3>Color: {{ color }} | Font Size: {{ fontSize }}px</h3>
+  <p>This text is dynamically styled using [ngStyle].</p>
+</div>
