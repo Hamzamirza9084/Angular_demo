@@ -1,0 +1,43 @@
+<h2>Pipes Example</h2>
+
+<h3>1. uppercase</h3>
+<p>{{ name }}</p>
+<p>{{ name | uppercase }}</p>
+
+<hr />
+
+<h3>2. lowercase</h3>
+<p>{{ upperName }}</p>
+<p>{{ upperName | lowercase }}</p>
+
+<hr />
+
+<h3>3. currency</h3>
+<p>{{ price }}</p>
+<p>{{ price | currency:'INR' }}</p>
+
+<hr />
+
+<h3>4. date</h3>
+<p>{{ today }}</p>
+<p>{{ today | date:'fullDate' }}</p>
+
+<hr />
+
+<h3>5. percent</h3>
+<p>{{ rate }}</p>
+<p>{{ rate | percent }}</p>
+
+<hr />
+
+<h3>6. titlecase</h3>
+<p>{{ text }}</p>
+<p>{{ text | titlecase }}</p>
+
+<hr />
+
+<h3>7. slice</h3>
+<p>{{ text }}</p>
+<p>{{ text | slice:0:7 }}</p>
+
+
