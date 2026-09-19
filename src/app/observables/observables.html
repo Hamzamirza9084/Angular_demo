@@ -1,0 +1,55 @@
+<h2>Observables with RxJS Example (4.6.2)</h2>
+
+<h3>1. Custom Observable (new Observable)</h3>
+<div>
+  <button (click)="startCustomObservable()" [disabled]="isCustomRunning">
+    {{ isCustomRunning ? 'Emitting values...' : 'Start Custom Observable' }}
+  </button>
+</div>
+<ul *ngIf="customLogs.length > 0">
+  <li *ngFor="let log of customLogs">{{ log }}</li>
+</ul>
+
+<hr />
+
+<h3>2. Creation Operators (of & from)</h3>
+<p><strong>of(10, 20, 30, 40, 50):</strong></p>
+<p>{{ ofNumbers.join(', ') }}</p>
+
+<p><strong>from(['Angular', 'React', 'Vue', 'TypeScript']):</strong></p>
+<ul>
+  <li *ngFor="let item of fromFrameworks">{{ item }}</li>
+</ul>
+
+<hr />
+
+<h3>3. Pipe Operators (filter & map)</h3>
+<p>Original Numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p>
+<p>Condition: filter even numbers and map (x 10):</p>
+<table border="1" cellpadding="8">
+  <tr>
+    <th>Index</th>
+    <th>Filtered & Multiplied Value</th>
+  </tr>
+  <tr *ngFor="let val of transformedNumbers; let i = index">
+    <td>{{ i + 1 }}</td>
+    <td>{{ val }}</td>
+  </tr>
+</table>
+
+<hr />
+
+<h3>4. Async Pipe (| async) with interval(1000)</h3>
+<p>Timer value streamed live via AsyncPipe:</p>
+<p style="font-size: 18px; font-weight: bold; color: blue;">
+  {{ timer$ | async }} seconds
+</p>
+
+<hr />
+
+<h3>5. BehaviorSubject</h3>
+<p>Current Subject Value: <strong>{{ currentMessage$ | async }}</strong></p>
+<div>
+  <input type="text" [(ngModel)]="newMessage" placeholder="Enter new message" />
+  <button (click)="updateSubject()" style="margin-left: 10px;">Emit Next Value</button>
+</div>
